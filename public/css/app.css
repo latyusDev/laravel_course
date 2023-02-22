@@ -1,0 +1,66 @@
+
+.named_route{
+    color: red;
+    text-align: center;
+}
+
+.named_route h1{
+    text-transform: capitalize;
+
+}
+
+.error{
+    color: red;
+}
+.students{
+    margin-top: 5rem;
+}
+
+.students table{
+    margin: 0 auto;
+}
+
+.students h1{
+text-align: center
+}
+
+.students table,th,td{
+    text-align: center;
+    border: 1px solid red;
+}
+
+.flash{
+    position: fixed;
+    top: 0;
+   
+    left: 0;
+    padding: 20px;
+    background-color:red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message{
+    color: white;
+    font-family: helvetica;
+    font-size: 1rem;
+
+}
+
+.hidden{
+    display: none;
+}
+
+.cancel{
+    background-color: red;
+    color: white;
+    border: none;
+    font: 4rem;
+    margin-left: 2rem;
+}
+
+.page{
+    margin-top: 2rem;
+    text-align: center;
+}
