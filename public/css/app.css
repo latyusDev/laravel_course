@@ -1,3 +1,13 @@
+*,::before,::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+
+}
 
 .named_route{
     color: red;
@@ -63,4 +73,70 @@ text-align: center
 .page{
     margin-top: 2rem;
     text-align: center;
+}
+
+.error{
+    margin-top: 20px;
+    color: red;
+}
+.user{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.user h2{
+    text-transform: capitalize;
+}
+
+header{
+    background-color: blue;
+    color: white;
+    padding-block: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav a{
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+    cursor: pointer;
+
+    
+}
+
+.nav button{
+    text-decoration: none;
+    color: white;
+    border: none;
+    background-color: blue;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 15px;
+    cursor: pointer;
+    
+}
+
+.footer{
+    background-color: blue;
+    color: white;
+    padding-block: 2rem;
+    text-align: center;
+}
+
+.center{
+    padding-top: 9rem;
+    height: 455px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.center h1{
+    color: blue;
+    margin-bottom: 3rem;
 }

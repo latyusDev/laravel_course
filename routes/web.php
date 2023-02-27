@@ -7,6 +7,7 @@ use App\Http\Controllers\UserRegistration;
 use App\Http\Controllers\UriController;
 use \App\Http\Controllers\getIt;
 use App\http\Controllers\CookieController;
+use App\Http\Controllers\HomeController;
 use App\http\Controllers\SessionController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\NewsletterController;
@@ -18,6 +19,7 @@ use App\Http\Controllers\ValidationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Mail;
+use App\Http\Controllers\WelcomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -108,21 +110,24 @@ Route::get('lang/{lang}', function($lang){
       return view('profile',['lang'=> $lang]);
 });
 
-
-//  Route::post('/user/register',array('uses'=>'UserRegistration@postRegister'));
- Route::post('/user/register',[UserRegistration::class, 'postRegister']);
-
-//  Route::post('/user/register',array('uses'=>'UserRegistration@postRegister'));
- #
-// route middleware
-Route::get('/user', [PostsController::class, 'user'])->middleware('protectedPage');
-
  
-
+// email
 Route::get('/email',function() {
    Mail::to('yunusabdullateef95@gmail.com')->send(new welcomeUser());
    return new welcomeUser();
 });
 
+Route::get('/', [WelcomeController::class, 'index'])->name('/welcome');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//manual authentication
+
+Route::get('/register', [userController::class, 'regPage']);
+Route::post('/store', [userController::class, 'store']);
+
+Route::get('/login', [userController::class, 'login']);
+Route::post('/authenticate', [userController::class, 'authenticate']);
+Route::post('/logout', [userController::class, 'logout']);
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+

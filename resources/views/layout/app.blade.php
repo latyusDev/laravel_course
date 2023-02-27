@@ -7,8 +7,32 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 <body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <h1>latyusDev</h1>
+                <div class="user">
+                    @auth
+                    <h2>{{ auth()->user()->name}}</h2>
+                        <form action="/logout" method="post">
+                            @csrf
+                            <button type="submit">Logout</button>
+                        </form>
+
+                    @else
+                    <a href="/login">login</a>
+
+                    @endauth
+                </div>
+            </nav>
+        </div>
+    </header>
    @yield('content')
 
+   <footer class="footer">
+    <p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
+
+   </footer>
    <x-flash/>
 </body>
 <script>

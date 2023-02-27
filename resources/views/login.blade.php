@@ -1,5 +1,3 @@
-@extends('layout.app')
-@section('content')
 
 <form action="/create" method="post">
     @csrf
@@ -32,4 +30,3 @@
     <br>
     <input type="submit" value="submit">
 </form>
-@endsection
