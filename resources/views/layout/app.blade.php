@@ -40,7 +40,6 @@
     const flash = document.querySelector('.flash')
     btn.addEventListener('click', ()=>{
         flash.classList.add('hidden')
-
     }) 
    
 </script>

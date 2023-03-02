@@ -127,6 +127,7 @@ header{
     color: white;
     padding-block: 2rem;
     text-align: center;
+    font-family: helvetica;
 }
 
 .center{
@@ -138,5 +139,5 @@ header{
 
 .center h1{
     color: blue;
-    margin-bottom: 3rem;
+    margin-block: 2rem;
 }

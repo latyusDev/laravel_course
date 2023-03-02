@@ -96,8 +96,8 @@ Route::post('/upload', [UploadFileController::class, 'showUploadFile']);
 
 // database
 Route::get('/list',  [MemberController::class, 'lists']);
+Route::get('/register2',  [MemberController::class, 'regPage']);
 Route::get('/delete/{id}',  [MemberController::class, 'delete']);
-// Route::get('/edit/{id}',);
 Route::get('/edit/{id}', [MemberController::class, 'showData']);
 Route::post('/edit/{id}', [MemberController::class, 'update']);
 Route::post('add', [MemberController::class, 'addData']);
