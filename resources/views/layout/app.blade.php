@@ -38,14 +38,14 @@
 <script>
     const btn = document.querySelector('.cancel')
     const flash = document.querySelector('.flash')
-    // btn.addEventListener('click', ()=>{
-    //     flash.classList.add('hidden')
-    // }) 
+    btn.addEventListener('click', ()=>{
+        flash.classList.add('hidden')
+    }) 
 
     const removeMessage = () =>{
         flash.classList.add('hidden')
     }
-   
+
     setTimeout(()=>removeMessage(), 2000);
    
 </script>
