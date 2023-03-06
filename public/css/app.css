@@ -141,3 +141,34 @@ header{
     color: blue;
     margin-block: 2rem;
 }
+.center p{
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.signup{
+    text-decoration: none;
+    
+}
+
+#signup{
+    padding: 15px 40px 15px 40px;
+    margin-top: 3rem;
+    border: 3px solid blue;
+    border-radius: 4px;
+    color: blue;
+    font-family: helvetica;
+    font-size: 1.2rem;
+}
+
+#signup:hover{
+    background-color: blue;
+    border: 3px solid white;
+    color: white;
+
+}
+
+.user2{
+    color: black;
+    text-transform: capitalize;
+}

@@ -1,30 +1,33 @@
 <?php
 
-
 namespace App\Providers;
-
+use Illuminate\Routing\UrlGenerator;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
 
-class AppServiceProvider extends ServiceProvider {
-   
-   /**
-      * Bootstrap any application services.
-      *
-      * @return void
-   */
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
 
-   public function boot() {
+    /**
+     * Bootstrap any application services.
+     *
+     * @param UrlGenerator $url
+     * @return void
+     */
+    public function boot(UrlGenerator $url)
+    {
       Model::unguard();
-   }
-
-   /**
-      * Register any application services.
-      *
-      * @return void
-   */
-
-   public function register() {
-      //
-   }
+        if (env('APP_ENV') == 'production') {
+            $url->forceScheme('https');
+        }
+    }
 }
